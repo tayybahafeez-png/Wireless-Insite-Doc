@@ -1,0 +1,439 @@
+Format type:keyword version: 1.1.0
+begin_<project> Ottawa Cosite
+project_id default
+begin_<globals> 
+longitude -75.6667
+latitude 45.3167
+end_<globals>
+FirstAvailableFeatureNumber 2
+FirstAvailableUnknownLayoutNumber 0
+FirstAvailableStudyAreaNumber 1
+FirstAvailableAntennaNumber 2
+FirstAvailableWaveformNumber 1
+begin_<caches> 
+begin_<cache> 
+type Unsupported
+feature -1
+filename ./Ottawa_CoSite.Unsupported.cache
+valid false
+end_<cache>
+end_<caches>
+begin_<studyarea> full_3d_R3_D1
+StudyAreaNumber 0
+active
+begin_<partitioning> 
+partitioning_type disabled
+queuing_type local
+max_threads 16
+num_partitions 0
+end_<partitioning>
+begin_<apg_acceleration> 
+enabled no
+workflow_mode full
+binary_output_mode none
+binary_rate 60 inactive
+database_mode write
+path_depth 25
+adjacency_distance 10
+end_<apg_acceleration>
+begin_<diffuse_scattering> 
+enabled no
+diffuse_reflections 2
+diffuse_diffractions 1
+diffuse_transmissions 0
+final_interaction_only yes
+spatial_resolution 2
+end_<diffuse_scattering>
+autoboundary 1
+begin_<model> 
+full3d
+raytracingmode sbr
+ray_spacing 0.25
+plane_wave_phase_reference automatic
+560.13 283.552 25.5
+max_reflections 3
+max_transmissions 0
+max_wedge_diffractions 1
+max_ref_between_diff 3
+coherence 2
+ground_coherence 2
+wall_coherence 2
+begin_<OutputRequests> 
+CEF no
+ComplexImpulseResponse no
+DelaySpread yes
+FieldAnimation no
+DirectionOfArrival yes
+DirectionOfDeparture yes
+ElectricFieldVsFrequency no
+ElectricFieldVsTime no
+EMFields no
+FSPathloss yes
+FSPower yes
+InputData no
+MeanDirectionOfArrival no
+MeanDirectionOfDeparture no
+MeanTimeOfArrival yes
+Pathloss yes
+Paths yes
+Power yes
+PowerDelayProfile no
+TimeOfArrival no
+XPathloss no
+TerrainProfile no
+end_<OutputRequests>
+end_<model>
+begin_<boundary> 
+begin_<reference> 
+cartesian
+longitude -75.6667
+latitude 45.3167
+visible no
+terrain
+end_<reference>
+zmin -0.25
+zmax 51.25
+nVertices 4
+51.0398292541504 -53.6490783691406 0
+1069.22106933594 -53.6490783691406 0
+1069.22106933594 620.753967285156 0
+51.0398292541504 620.753967285156 0
+end_<boundary>
+end_<studyarea>
+begin_<feature> 
+feature 0
+city
+active
+filename ./ottawa.city
+end_<feature>
+begin_<feature> 
+feature 1
+terrain
+active
+filename ./ottawa.ter
+end_<feature>
+begin_<txrx_sets> 
+filename ./Ottawa_CoSite.txrx
+FirstAvailableTxRxNumber 6
+end_<txrx_sets>
+FirstAvailableCommSystemNumber 2
+begin_<CommSystem> complete
+CommSystemNumber 0
+active
+BaseStations 1 2 3 4 
+Receivers 5 
+AnalysisOption Bit Error Rate
+NoisePowerDensity -174
+UniformInterference -250
+BestTxCriterion 0
+BerBandwidth 1
+ModulationScheme DPSK
+AlphabetSize 2
+SpreadSpectrumProcessingGain 1
+AnalysisType AWGN
+BitRate 1e+06
+OutageBerThreshold 0.001
+WirelessAccessMethod WiMax
+ThroughputBandwidth 20
+NumberOfDataStreams 1
+UserDefinedFile 
+MimoMethod Beamforming / Diversity
+TxBeamformingOption No Beamforming/Precoding
+RxDiversity Selection Combining
+PrecodingFilename ./
+DoBaseStationsInterfere 0
+PowerAllocationMethod UniformPowerAllocationMethod
+UseDefaultMaxStreams yes
+DefaultMaxStreams 8
+UserSpecifiedMaxStreams 8
+UseEqualMcrAcrossStreams yes
+SigParSignalBandwidth 1
+end_<CommSystem>
+begin_<CommSystem> without NE Sector effects
+CommSystemNumber 1
+active
+BaseStations 2 3 4 
+Receivers 5 
+AnalysisOption Bit Error Rate
+NoisePowerDensity -174
+UniformInterference -250
+BestTxCriterion 0
+BerBandwidth 1
+ModulationScheme DPSK
+AlphabetSize 2
+SpreadSpectrumProcessingGain 1
+AnalysisType AWGN
+BitRate 1e+06
+OutageBerThreshold 0.001
+WirelessAccessMethod WiMax
+ThroughputBandwidth 20
+NumberOfDataStreams 1
+UserDefinedFile 
+MimoMethod Beamforming / Diversity
+TxBeamformingOption No Beamforming/Precoding
+RxDiversity Selection Combining
+PrecodingFilename ./
+DoBaseStationsInterfere 0
+PowerAllocationMethod UniformPowerAllocationMethod
+UseDefaultMaxStreams yes
+DefaultMaxStreams 8
+UserSpecifiedMaxStreams 8
+UseEqualMcrAcrossStreams yes
+SigParSignalBandwidth 1
+end_<CommSystem>
+begin_<antenna> Half-wave dipole
+antenna 0
+type HalfWaveDipole
+waveform 0
+polarization vertical
+power_threshold -250
+cable_loss 0
+VSWR 1
+component TotalGain
+gain_range 40
+show_arrow no
+is_sphere no
+end_<antenna>
+begin_<antenna> Vertical Isotropic
+antenna 1
+type isotropic
+waveform 0
+polarization vertical
+power_threshold -250
+cable_loss 0
+VSWR 1
+component TotalGain
+gain_range 40
+show_arrow no
+is_sphere no
+end_<antenna>
+begin_<Waveform> Narrowband (450 MHz, 10MHz)
+Sinusoid
+waveform 0
+frequencyDistribution Uniform 500.000 1500.000 inactive nosampling 10
+CarrierFrequency 450000000.000
+phase 0.000
+bandwidth 10000000.000
+end_<Waveform>
+FirstAvailableFilterNumber 0
+begin_<requests> 
+cartesian
+sealevel
+local
+CalculationMode New
+MaxRenderedPaths 25
+FieldAnimationIncrement 10
+FieldAnimationTimeAveraged yes
+CEF no
+ComplexImpulseResponse no
+DelaySpread yes
+FieldAnimation no
+DirectionOfArrival yes
+DirectionOfDeparture yes
+ElectricFieldVsFrequency no
+ElectricFieldVsTime no
+EMFields no
+FSPathloss yes
+FSPower yes
+InputData no
+MeanDirectionOfArrival no
+MeanDirectionOfDeparture no
+MeanTimeOfArrival yes
+Pathloss yes
+Paths yes
+Power yes
+PowerDelayProfile no
+TimeOfArrival no
+XPathloss no
+TerrainProfile no
+end_<requests>
+begin_<Scales> 
+begin_<RcvdPower> 
+AutoScaling 0
+DrawValues 0
+AutoUpdating 1
+Discrete 0
+UseGlobalOpacity 1
+ManualValuesSet 1
+ClampedHigh 1
+ClampedLow 1
+Alpha 1.000e+00
+ManualMin -8.000e+01
+ManualMax -2.000e+01
+TextColor 1.000 1.000 1.000
+Colors 6
+0.298 0.000 0.498
+0.000 0.000 1.000
+0.000 1.000 0.000
+1.000 1.000 0.000
+1.000 0.498 0.000
+1.000 0.000 0.000
+PartitionValues 
+5
+-7.000e+01 -6.000e+01 -5.000e+01 -4.000e+01 -3.000e+01 
+end_<RcvdPower>
+begin_<Pathloss> 
+AutoScaling 0
+DrawValues 0
+AutoUpdating 1
+Discrete 0
+UseGlobalOpacity 1
+ManualValuesSet 1
+ClampedHigh 0
+ClampedLow 0
+Alpha 1.000
+ManualMin 53.570
+ManualMax 120.000
+TextColor 1.000 1.000 1.000
+Colors 6
+1.000 0.000 0.000
+1.000 0.498 0.000
+1.000 1.000 0.000
+0.000 1.000 0.000
+0.000 0.000 1.000
+0.298 0.000 0.498
+PartitionValues 
+5
+64.642 75.713 86.785 97.857 108.928 
+end_<Pathloss>
+begin_<C2I> 
+AutoScaling 1
+DrawValues 0
+AutoUpdating 0
+Discrete 1
+UseGlobalOpacity 1
+ManualValuesSet 0
+ClampedHigh 1
+ClampedLow 1
+Alpha 1.000e+00
+ManualMin -2.253e+02
+ManualMax 2.122e+02
+TextColor 1.000 1.000 1.000
+Colors 3
+1.000 0.000 0.000
+1.000 1.000 0.000
+0.000 1.000 0.000
+PartitionValues 
+2
+0.000e+00 2.000e+01 
+end_<C2I>
+begin_<NPaths> 
+AutoScaling 1
+DrawValues 0
+AutoUpdating 1
+Discrete 0
+UseGlobalOpacity 1
+ManualValuesSet 0
+ClampedHigh 1
+ClampedLow 1
+Alpha 1.000e+00
+ManualMin 0.000e+00
+ManualMax 1.000e+00
+TextColor 1.000 1.000 1.000
+Colors 6
+0.300 0.000 0.500
+0.000 0.000 1.000
+0.000 1.000 0.000
+1.000 1.000 0.000
+1.000 0.500 0.000
+1.000 0.000 0.000
+PartitionValues 
+5
+0.167 0.333 0.500 0.667 0.833 
+end_<NPaths>
+begin_<BER> 
+AutoScaling 1
+DrawValues 0
+AutoUpdating 1
+Discrete 0
+UseGlobalOpacity 1
+ManualValuesSet 0
+ClampedHigh 1
+ClampedLow 1
+Alpha 1.000e+00
+ManualMin 0.000e+00
+ManualMax 1.000e+00
+TextColor 1.000 1.000 1.000
+Colors 6
+0.300 0.000 0.500
+0.000 0.000 1.000
+0.000 1.000 0.000
+1.000 1.000 0.000
+1.000 0.500 0.000
+1.000 0.000 0.000
+PartitionValues 
+5
+0.167 0.333 0.500 0.667 0.833 
+end_<BER>
+begin_<Throughput> 
+AutoScaling 1
+DrawValues 0
+AutoUpdating 1
+Discrete 0
+UseGlobalOpacity 1
+ManualValuesSet 0
+ClampedHigh 1
+ClampedLow 1
+Alpha 1.000e+00
+ManualMin 0.000e+00
+ManualMax 1.000e+00
+TextColor 1.000 1.000 1.000
+Colors 6
+0.300 0.000 0.500
+0.000 0.000 1.000
+0.000 1.000 0.000
+1.000 1.000 0.000
+1.000 0.500 0.000
+1.000 0.000 0.000
+PartitionValues 
+5
+0.167 0.333 0.500 0.667 0.833 
+end_<Throughput>
+begin_<MpeThreshhold> 
+AutoScaling 0
+DrawValues 0
+AutoUpdating 0
+Discrete 1
+UseGlobalOpacity 1
+ManualValuesSet 1
+ClampedHigh 1
+ClampedLow 1
+Alpha 1.000e+00
+ManualMin 0.000e+00
+ManualMax 2.000e+02
+TextColor 1.000 1.000 1.000
+Colors 4
+0.300 0.000 0.500
+0.000 1.000 0.000
+1.000 1.000 0.000
+1.000 0.000 0.000
+PartitionValues 
+3
+0.001 50.000 100.000 
+end_<MpeThreshhold>
+begin_<HuygensAntenna> 
+AutoScaling 1
+DrawValues 0
+AutoUpdating 1
+Discrete 0
+UseGlobalOpacity 0
+ManualValuesSet 0
+ClampedHigh 1
+ClampedLow 1
+Alpha 8.000e-01
+ManualMin -6.277e+66
+ManualMax -6.277e+66
+TextColor 1.000 1.000 1.000
+Colors 6
+0.300 0.000 0.500
+0.000 0.000 1.000
+0.000 1.000 0.000
+1.000 1.000 0.000
+1.000 0.500 0.000
+1.000 0.000 0.000
+PartitionValues 
+5
+1.000e-28 1.000e-28 1.000e-28 1.000e-28 1.000e-28 
+end_<HuygensAntenna>
+end_<Scales>
+end_<project>
